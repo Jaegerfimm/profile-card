@@ -1,5 +1,6 @@
 @import "variables";
 
+
 html,body{    
     padding: 0;
     margin: 0;
@@ -13,21 +14,126 @@ html,body{
 
 html{
     body{
+        overflow: hidden;
         font-family: "Kumbh Sans";
         font-size: 18px;
+        background-color: $myDarkCyan;
 
-        div.root{
-            background-color: $myDarkCyan;
-            div.container{
+        div.box{    
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
+            img.bubbleTop{
+                z-index: -1;
+                position: absolute;
+                right: 48%;
+                bottom: 50%;
+            }
+            img.bubbleBottom{
+                z-index: -1;
+                position: absolute;
+                left: 52%;
+                top: 43%;
+            }
+
+        div.profileBox{
+            box-sizing: border-box;
+            overflow: hidden;
+            text-align: center;
+            
+            width: 340px;
+            border-radius: 15px;
+
+            background-color: white;
+            background-image: url(/images/bg-pattern-card.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 160px;
+
+            div.profileBox_Part1{
+                box-sizing: border-box;
+                width: 100%;
+                height: 300px;
+                padding: 20px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                
+                img.profilePicture{
+                    border: 5px solid white;
+                    border-radius: 50px;
+                    margin: 1.2rem;
+                }
+                p.profileName{
+                    font-weight: 800;
+                    color: $myVeryDarkBlue;
+                    padding: 0;
+                    margin: 0;
+                }
+                p.profileName::after{
+                    content: " 26";
+                    font-weight: 100;
+                    color: $myDarkGrayishBlue;
+                }
+                p.profileCity{
+                    font-size: 14px;
+                    color: $myDarkGray;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            div.profileBox_Part2{
+                box-sizing: border-box;
+                width: 100%;
+                height: 80px;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                
+                border-top: 1px solid rgba(128, 128, 128, 0.198);
+
+                div.flpInfo{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: end;
+
+                    p.flpNumber{
+                        color: $myVeryDarkBlue;
+                        font-weight: 800;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    p.followers{
+                        color: $myDarkGrayishBlue;
+                        font-size: 10px;
+                        letter-spacing: 1.5px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    p.likes{
+                        color: $myDarkGrayishBlue;
+                        font-size: 10px;
+                        letter-spacing: 1.5px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    p.photos{
+                        color: $myDarkGrayishBlue;
+                        font-size: 10px;
+                        letter-spacing: 1.5px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
             }
         }
     }
-}
-
-/*
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/Jaegerfimm">Jaegerfimm</a>.
-  </div>
-*/ 
+}}

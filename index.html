@@ -16,14 +16,36 @@
   <title>Frontend Mentor | Profile card component</title>
 </head>
 <body>
-  <div class="root">
-    <div class="container">
 
+<div class="box">
+  <img src="/images/bg-pattern-top.svg" alt="bubbleTop" class="bubbleTop">
+  <img src="/images/bg-pattern-bottom.svg" alt="bubbleBottom" class="bubbleBottom">
+    <!--Div that contains everything-->
+  <div class="profileBox">
+
+<!--Profile picture, name, location-->
+    <div class="profileBox_Part1">
+      <img src="/images/image-victor.jpg" alt="profile picture" class="profilePicture">
+      <p class="profileName">Victor Crest</p>
+      <p class="profileCity">London</p>
     </div>
+<!--Profile info: Followers, Liks, Photos-->
+    <div class="profileBox_Part2">
+      <div class="flpInfo">
+        <p class="flpNumber">80K</p>
+        <p class="followers">Followers</p>
+      </div>
+      <div class="flpInfo">
+        <p class="flpNumber">803K</p>
+        <p class="likes">Likes</p>
+      </div>
+      <div class="flpInfo">
+        <p class="flpNumber">1.4K</p>
+        <p class="photos">Photos</p>
+      </div>
+    </div>
+
   </div>
-
-  <footer class="footer">
-
-  </footer>
+</div>
 </body>
 </html>
